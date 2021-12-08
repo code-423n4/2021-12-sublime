@@ -91,3 +91,11 @@ The `getTokensForShares()` function is meant to return the number of underlying 
 
 To preserve precision, we move to base `10**30` during mathematical calculations. This causes overflow issues in a few places where penalty is calculated (for eg, [this line](https://github.com/sublime-finance/sublime-v1/blob/7fbd3d57f0f447b66f5f78e9926e2f3e05dd9726/contracts/Pool/Pool.sol#L500)) or interest calculations are made. We have planned corrections, but unfortunately haven't been able to push them yet.
 
+# Installations Steps
+Requirements
+1. node version >12.x
+2. npm version >6.x
+
+Once the repo is cloned run the command below to install all the dependencies
+> npm install --save-dev 
+
