@@ -56,6 +56,48 @@ The scope includes the following files:
 | /contracts/PriceOracle.sol | 62 |
 | /contracts/Proxy.sol | 1 |
 
+# Installation and Testing Steps
+Requirements
+1. node version >12.x
+2. npm version >6.x
+
+### Once the repo is cloned run the command below to install all the dependencies
+> npm install --save-dev 
+
+### Create a .env file with contents as mentioned
+
+> touch .env
+
+Atleast 4 private keys must be provided. The keys must be comma seperated as shown below
+
+`privKey1,privKey2,privKey3,privKey4`
+
+It recommended to use new private keys whenever you clone the repo. You generate new private keys using https://vanity-eth.tk/
+
+**Sample .env file:**
+```
+PRIVATE_KEYS=4fda40eb4eca4113858b440941953bce0ac10a1b7c2b78cef70c53ee334c9a04,933cc22684708d10f6184245c7fab66e80ed3809d96f1f34ebd8b035fa67dd2d,94f96324f8a230558bb1e2cdc00a0cdf4812e3764a3d04414fb9fffe13307676,420cd36f64e399d5a2493ed85c75a1a7fb3f127105fe1a2f7c270887d3177e28
+
+LOGGING=false
+SAVE_DEPLOYMENT=false
+REPORT_GAS=true
+```
+
+### Compile contracts
+Compile the contracts using the command below
+ > npm run compile
+
+### Test the contracts
+The repo comes with existing tests. To run existing tests run 
+> npm run test
+
+To add new tests to the repo,
+
+> touch test/newTest.spec.ts
+Edit the contents of `test/newTest.spec.ts`
+re-run the tests using 
+> npm run test
+
 # Assumptions / Design choices
 
 Following is a list of few key design choices implemented in the architecture. Please keep in mind that issues that closely resemble the below assumptions might be considered invalid.
@@ -89,46 +131,4 @@ The `getTokensForShares()` function is meant to return the number of underlying 
 
 **6. Overflow issues in penalty and interest accrual calculations**
 
-To preserve precision, we move to base `10**30` during mathematical calculations. This causes overflow issues in a few places where penalty is calculated (for eg, [this line](https://github.com/sublime-finance/sublime-v1/blob/7fbd3d57f0f447b66f5f78e9926e2f3e05dd9726/contracts/Pool/Pool.sol#L500)) or interest calculations are made. We have planned corrections, but unfortunately haven't been able to push them yet.
-
-# Installations and Testing Steps
-Requirements
-1. node version >12.x
-2. npm version >6.x
-
-### Once the repo is cloned run the command below to install all the dependencies
-> npm install --save-dev 
-
-### Create a .env file with contents as mentioned
-
-> touch .env
-
-Atleast 4 private keys must be provided. The keys must be comma seperated as shown below
-
-`privKey1,privKey2,privKey3,privKey4`
-
-It recommended to use new private keys whenever you clone the repo. You generate new private keys using https://vanity-eth.tk/
-
-*Sample .env file*
-```
-PRIVATE_KEYS=4fda40eb4eca4113858b440941953bce0ac10a1b7c2b78cef70c53ee334c9a04,933cc22684708d10f6184245c7fab66e80ed3809d96f1f34ebd8b035fa67dd2d,94f96324f8a230558bb1e2cdc00a0cdf4812e3764a3d04414fb9fffe13307676,420cd36f64e399d5a2493ed85c75a1a7fb3f127105fe1a2f7c270887d3177e28
-
-LOGGING=false
-SAVE_DEPLOYMENT=false
-REPORT_GAS=true
-```
-
-### Compile contracts
-Compile the contracts using the command below
- > npm run compile
-
-### Test the contracts
-The repo comes with existing tests. To run existing tests run 
-> npm run test
-
-To add new tests to the repo,
-
-> touch test/newTest.spec.ts
-Edit the contents of `test/newTest.spec.ts`
-re-run the tests using 
-> npm run test
+To preserve precision, we move to base `10**30` during mathematical calculations. This causes overflow issues in a few places where penalty is calculated (for eg, [this line](https://github.com/sublime-finance/sublime-v1/blob/7fbd3d57f0f447b66f5f78e9926e2f3e05dd9726/contracts/Pool/Pool.sol#L500)) or where interest calculations are made. We have planned corrections for them already.
