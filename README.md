@@ -24,37 +24,37 @@ Please note that the contest duration is 1 week.
 The scope includes the following files:
 | Pool | SLOC|
 | ---- | ----- |
-| /contracts/Pool/Pool.sol | |
-| /contracts/Pool/Extension.sol | |
-| /contracts/Pool/PoolFactory.sol | |
-| /contracts/Pool/Repayments.sol | |
+| /contracts/Pool/Pool.sol | 312 |
+| /contracts/Pool/Extension.sol | 69 |
+| /contracts/Pool/PoolFactory.sol | 174 |
+| /contracts/Pool/Repayments.sol | 177 |
 
 | Credit Lines | SLOC |
 | ----- | ----- |
-| /contracts/CreditLine/CreditLine.sol | |
+| /contracts/CreditLine/CreditLine.sol | 346 |
 
 | Savings Account | SLOC |
 | ----- | ----- |
-| /contracts/SavingsAccount/SavingsAccount.sol | |
-| /contracts/SavingsAccount/SavingsAccountUtil.sol | |
+| /contracts/SavingsAccount/SavingsAccount.sol | 125 |
+| /contracts/SavingsAccount/SavingsAccountUtil.sol | 43 |
 
 | Verification | SLOC |
 | ----- | ----- |
-| /contracts/Verification/Verification.sol | |
-| /contracts/Verification/adminVerifier.sol | |
+| /contracts/Verification/Verification.sol | 40 |
+| /contracts/Verification/adminVerifier.sol | 18 |
 
 | Yield | SLOC |
 | ----- | ----- |
-| /contracts/yield/AaveYield.sol | |
-| /contracts/yield/CompoundYield.sol | |
-| /contracts/yield/YearnYield.sol | |
-| /contracts/yield/NoYield.sol | |
-| /contracts/yield/StrategyRegistry.sol | |
+| /contracts/yield/AaveYield.sol | 97 |
+| /contracts/yield/CompoundYield.sol | 75 |
+| /contracts/yield/YearnYield.sol | 74 |
+| /contracts/yield/NoYield.sol | 42 |
+| /contracts/yield/StrategyRegistry.sol | 34 |
 
 | Misc. | SLOC |
 | ----- | ----- |
-| /contracts/PriceOracle.sol | |
-| /contracts/Proxy.sol | |
+| /contracts/PriceOracle.sol | 62 |
+| /contracts/Proxy.sol | 1 |
 
 # Assumptions / Design choices
 
