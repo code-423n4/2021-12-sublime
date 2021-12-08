@@ -1,4 +1,4 @@
-# Sublime Code Arena Contest Details
+# Sublime Code4rena Contest Details
 
 - $47,500 USDC main award pot
 - $2,500 gas optimization award pot
