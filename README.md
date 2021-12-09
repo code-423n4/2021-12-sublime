@@ -17,6 +17,10 @@ For more information, please refer to the [documentation](https://docs.sublime.f
 
 To learn more, please join the [Sublime Discord server](https://discord.gg/cnadj5hFwh).
 
+# Video Intro
+
+Here's a quick overview explaning the architecture and what we're building: [https://www.youtube.com/watch?v=L8IExC-cT8E](https://www.youtube.com/watch?v=L8IExC-cT8E)
+
 # Audit Scope
 
 Please note that the contest duration is 1 week.
